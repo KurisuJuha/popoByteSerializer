@@ -90,4 +90,16 @@ public class DefaultTest
         var readValue = reader.ReadLong();
         Assert.AreEqual(value, readValue);
     }
+
+    [Test]
+    public void ULongTest()
+    {
+        var value = (ulong)12312312;
+        DataWriter writer = new DataWriter();
+        writer.Puts(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadULong();
+        Assert.AreEqual(value, readValue);
+    }
+
 }

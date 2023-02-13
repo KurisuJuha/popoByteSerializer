@@ -9,5 +9,10 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
         public ReadOnlyCollection<byte> bytes => byteList.AsReadOnly();
         private List<byte> byteList = new List<byte>();
 
+        public DataWriter Puts(Boolean value)
+        {
+            byteList.AddRange(BitConverter.GetBytes(value));
+            return this;
+        }
     }
 }

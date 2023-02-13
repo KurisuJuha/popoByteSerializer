@@ -48,4 +48,15 @@ public class UnityExTest
         Assert.AreEqual(value, readValue);
     }
 
+    [Test]
+    public void Vector4Test()
+    {
+        var value = new Vector4(2.4f, 3234.4f, -42f, 0);
+        DataWriter writer = new DataWriter();
+        writer.Puts(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadVector4();
+        Assert.AreEqual(value, readValue);
+    }
+
 }

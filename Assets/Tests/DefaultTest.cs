@@ -25,4 +25,14 @@ public class DefaultTest
         Assert.AreEqual(value, readValue);
     }
 
+    [Test]
+    public void SByteTest()
+    {
+        var value = (sbyte)-12;
+        DataWriter writer = new DataWriter();
+        writer.Puts(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadSByte();
+        Assert.AreEqual(value, readValue);
+    }
 }

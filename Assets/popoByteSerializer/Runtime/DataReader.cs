@@ -48,5 +48,8 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
         public Single ReadSingle()
             => BitConverter.ToSingle(ReadBytes(4), 0);
 
+        public Double ReadDouble()
+            => BitConverter.ToDouble(ReadBytes(8), 0);
+
     }
 }

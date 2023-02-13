@@ -21,5 +21,8 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
         public Byte ReadByte()
             => bytes[position++ - 1];
 
+        public SByte ReadSByte()
+            => (sbyte)ReadByte();
+
     }
 }

@@ -102,4 +102,15 @@ public class DefaultTest
         Assert.AreEqual(value, readValue);
     }
 
+    [Test]
+    public void CharTest()
+    {
+        var value = 't';
+        DataWriter writer = new DataWriter();
+        writer.Puts(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadChar();
+        Assert.AreEqual(value, readValue);
+    }
+
 }

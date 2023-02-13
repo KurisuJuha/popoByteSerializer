@@ -24,5 +24,8 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
 
         public static DataWriter Puts(this DataWriter self, Color value)
             => self.Puts(value.r).Puts(value.g).Puts(value.b).Puts(value.a);
+
+        public static DataWriter Puts(this DataWriter self, Quaternion value)
+            => self.Puts(value.x).Puts(value.y).Puts(value.z).Puts(value.w);
     }
 }

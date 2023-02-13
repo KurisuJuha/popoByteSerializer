@@ -9,7 +9,7 @@ public class UnityExTest
     {
         var value = new Vector2(2.4f, 3234.4f);
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadVector2();
         Assert.AreEqual(value, readValue);
@@ -20,7 +20,7 @@ public class UnityExTest
     {
         var value = new Vector2Int(2, -3234);
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadVector2Int();
         Assert.AreEqual(value, readValue);
@@ -31,7 +31,7 @@ public class UnityExTest
     {
         var value = new Vector3(2.4f, 3234.4f, 342f);
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadVector3();
         Assert.AreEqual(value, readValue);
@@ -42,7 +42,7 @@ public class UnityExTest
     {
         var value = new Vector3Int(234, -3234, 3);
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadVector3Int();
         Assert.AreEqual(value, readValue);
@@ -53,7 +53,7 @@ public class UnityExTest
     {
         var value = new Vector4(2.4f, 3234.4f, -42f, 0);
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadVector4();
         Assert.AreEqual(value, readValue);
@@ -69,7 +69,7 @@ public class UnityExTest
             new Vector4(3, 34, -3, 1)
         );
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadMatrix4x4();
         Assert.AreEqual(value, readValue);
@@ -80,7 +80,7 @@ public class UnityExTest
     {
         var value = new Color(0.5f, 0.2f, 0.1f, 1);
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadColor();
         Assert.AreEqual(value, readValue);
@@ -91,7 +91,7 @@ public class UnityExTest
     {
         var value = new Quaternion(0.4f, -243.4f, 13212, 343);
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadQuaternion();
         Assert.AreEqual(value, readValue);

@@ -8,7 +8,7 @@ public class DefaultTest
     {
         var value = false;
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadBoolean();
         Assert.AreEqual(value, readValue);
@@ -19,7 +19,7 @@ public class DefaultTest
     {
         var value = (byte)12;
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadByte();
         Assert.AreEqual(value, readValue);
@@ -30,7 +30,7 @@ public class DefaultTest
     {
         var value = (sbyte)-12;
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadSByte();
         Assert.AreEqual(value, readValue);
@@ -41,7 +41,7 @@ public class DefaultTest
     {
         var value = (short)-1233;
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadShort();
         Assert.AreEqual(value, readValue);
@@ -52,7 +52,7 @@ public class DefaultTest
     {
         var value = (ushort)123;
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadUShort();
         Assert.AreEqual(value, readValue);
@@ -63,7 +63,7 @@ public class DefaultTest
     {
         var value = (int)-12;
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadInt();
         Assert.AreEqual(value, readValue);
@@ -74,7 +74,7 @@ public class DefaultTest
     {
         var value = (uint)1344342;
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadUInt();
         Assert.AreEqual(value, readValue);
@@ -85,7 +85,7 @@ public class DefaultTest
     {
         var value = (long)-232333312;
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadLong();
         Assert.AreEqual(value, readValue);
@@ -96,7 +96,7 @@ public class DefaultTest
     {
         var value = (ulong)12312312;
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadULong();
         Assert.AreEqual(value, readValue);
@@ -107,7 +107,7 @@ public class DefaultTest
     {
         var value = 't';
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadChar();
         Assert.AreEqual(value, readValue);
@@ -118,7 +118,7 @@ public class DefaultTest
     {
         var value = 123.4f;
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadFloat();
         Assert.AreEqual(value, readValue);
@@ -129,7 +129,7 @@ public class DefaultTest
     {
         var value = -12423423442.4324d;
         DataWriter writer = new DataWriter();
-        writer.Puts(value);
+        writer.Append(value);
         DataReader reader = new DataReader(writer.bytes);
         var readValue = reader.ReadDouble();
         Assert.AreEqual(value, readValue);

@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Text;
 using System.Collections.ObjectModel;
 
 namespace JuhaKurisu.PopoTools.ByteSerializer
@@ -62,5 +63,8 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
 
         public Byte[] ReadBytes(int length)
             => byteArray[position..(position += length)];
+
+        public string ReadString()
+            => Encoding.UTF8.GetString(ReadBytes());
     }
 }

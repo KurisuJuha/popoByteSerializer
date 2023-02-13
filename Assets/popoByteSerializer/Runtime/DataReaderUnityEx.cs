@@ -19,5 +19,7 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
         public static Vector4 ReadVector4(this DataReader self)
             => new Vector4(self.ReadFloat(), self.ReadFloat(), self.ReadFloat(), self.ReadFloat());
 
+        public static Matrix4x4 ReadMatrix4x4(this DataReader self)
+            => new Matrix4x4(self.ReadVector4(), self.ReadVector4(), self.ReadVector4(), self.ReadVector4());
     }
 }

@@ -21,5 +21,10 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
             return this;
         }
 
+        public DataWriter Puts(SByte value)
+        {
+            byteList.AddRange(BitConverter.GetBytes(value));
+            return this;
+        }
     }
 }

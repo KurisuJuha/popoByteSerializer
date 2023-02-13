@@ -75,4 +75,14 @@ public class UnityExTest
         Assert.AreEqual(value, readValue);
     }
 
+    [Test]
+    public void ColorTest()
+    {
+        var value = new Color(0.5f, 0.2f, 0.1f, 1);
+        DataWriter writer = new DataWriter();
+        writer.Puts(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadColor();
+        Assert.AreEqual(value, readValue);
+    }
 }

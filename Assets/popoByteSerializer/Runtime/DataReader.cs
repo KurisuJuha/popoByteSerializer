@@ -24,28 +24,28 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
         public SByte ReadSByte()
             => (sbyte)ReadByte();
 
-        public Int16 ReadInt16()
+        public Int16 ReadShort()
             => BitConverter.ToInt16(ReadBytes(2), 0);
 
-        public UInt16 ReadUInt16()
+        public UInt16 ReadUShort()
             => BitConverter.ToUInt16(ReadBytes(2), 0);
 
-        public Int32 ReadInt32()
+        public Int32 ReadInt()
             => BitConverter.ToInt32(ReadBytes(4), 0);
 
-        public UInt32 ReadUInt32()
+        public UInt32 ReadUInt()
             => BitConverter.ToUInt32(ReadBytes(4), 0);
 
-        public Int64 ReadInt64()
+        public Int64 ReadLong()
             => BitConverter.ToInt64(ReadBytes(8), 0);
 
-        public UInt64 ReadUInt64()
+        public UInt64 ReadULong()
             => BitConverter.ToUInt64(ReadBytes(8), 0);
 
         public Char ReadChar()
             => BitConverter.ToChar(ReadBytes(2), 0);
 
-        public Single ReadSingle()
+        public Single ReadFloat()
             => BitConverter.ToSingle(ReadBytes(4), 0);
 
         public Double ReadDouble()

@@ -18,5 +18,8 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
         public bool ReadBoolean()
             => BitConverter.ToBoolean(new byte[] { ReadByte() }, 0);
 
+        public Byte ReadByte()
+            => bytes[position++ - 1];
+
     }
 }

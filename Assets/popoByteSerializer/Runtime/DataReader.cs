@@ -42,5 +42,8 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
         public UInt64 ReadUInt64()
             => BitConverter.ToUInt64(ReadBytes(8), 0);
 
+        public Char ReadChar()
+            => BitConverter.ToChar(ReadBytes(2), 0);
+
     }
 }

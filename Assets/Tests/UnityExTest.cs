@@ -59,4 +59,20 @@ public class UnityExTest
         Assert.AreEqual(value, readValue);
     }
 
+    [Test]
+    public void Matrix4x4Test()
+    {
+        var value = new Matrix4x4(
+            new Vector4(3, 24, 4, 4),
+            new Vector4(-3, 45, 21, 56566),
+            new Vector4(0, 0, 0, 3),
+            new Vector4(3, 34, -3, 1)
+        );
+        DataWriter writer = new DataWriter();
+        writer.Puts(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadMatrix4x4();
+        Assert.AreEqual(value, readValue);
+    }
+
 }

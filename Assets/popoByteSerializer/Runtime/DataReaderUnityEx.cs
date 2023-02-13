@@ -21,5 +21,8 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
 
         public static Matrix4x4 ReadMatrix4x4(this DataReader self)
             => new Matrix4x4(self.ReadVector4(), self.ReadVector4(), self.ReadVector4(), self.ReadVector4());
+
+        public static Color ReadColor(this DataReader self)
+            => new Color(self.ReadFloat(), self.ReadFloat(), self.ReadFloat(), self.ReadFloat());
     }
 }

@@ -80,4 +80,14 @@ public class DefaultTest
         Assert.AreEqual(value, readValue);
     }
 
+    [Test]
+    public void LongTest()
+    {
+        var value = (long)-232333312;
+        DataWriter writer = new DataWriter();
+        writer.Puts(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadLong();
+        Assert.AreEqual(value, readValue);
+    }
 }

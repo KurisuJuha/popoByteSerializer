@@ -25,7 +25,7 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
             => BitConverter.ToBoolean(new byte[] { ReadByte() }, 0);
 
         public Byte ReadByte()
-            => bytes[position++ - 1];
+            => bytes[++position - 1];
 
         public SByte ReadSByte()
             => (sbyte)ReadByte();

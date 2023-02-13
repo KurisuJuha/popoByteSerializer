@@ -13,4 +13,16 @@ public class DefaultTest
         var readValue = reader.ReadBoolean();
         Assert.AreEqual(value, readValue);
     }
+
+    [Test]
+    public void ByteTest()
+    {
+        var value = (byte)12;
+        DataWriter writer = new DataWriter();
+        writer.Puts(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadByte();
+        Assert.AreEqual(value, readValue);
+    }
+
 }

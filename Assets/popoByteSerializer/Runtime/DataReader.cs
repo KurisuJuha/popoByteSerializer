@@ -57,6 +57,9 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
         public Double ReadDouble()
             => BitConverter.ToDouble(ReadBytes(8), 0);
 
+        public Byte[] ReadBytes()
+            => ReadBytes(ReadInt());
+
         public Byte[] ReadBytes(int length)
             => byteArray[position..(position += length)];
     }

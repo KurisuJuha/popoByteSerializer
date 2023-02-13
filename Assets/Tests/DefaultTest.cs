@@ -35,4 +35,15 @@ public class DefaultTest
         var readValue = reader.ReadSByte();
         Assert.AreEqual(value, readValue);
     }
+
+    [Test]
+    public void ShortTest()
+    {
+        var value = (short)-1233;
+        DataWriter writer = new DataWriter();
+        writer.Puts(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadShort();
+        Assert.AreEqual(value, readValue);
+    }
 }

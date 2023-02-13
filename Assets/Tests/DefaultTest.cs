@@ -134,4 +134,17 @@ public class DefaultTest
         var readValue = reader.ReadDouble();
         Assert.AreEqual(value, readValue);
     }
+
+    [Test]
+    public void BytesTest()
+    {
+        var value = new byte[] { 23, 43, 66, 23, 2, 0 };
+        DataWriter writer = new DataWriter();
+        writer.Append(value.Length);
+        writer.Append(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadBytes(reader.ReadInt());
+        Assert.AreEqual(value, readValue);
+    }
+
 }

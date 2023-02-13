@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.ObjectModel;
 
 namespace JuhaKurisu.PopoTools.ByteSerializer
@@ -13,6 +14,11 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
         public DataReader(byte[] bytes)
         {
             byteArray = bytes;
+        }
+
+        public DataReader(ReadOnlyCollection<byte> bytes)
+        {
+            this.byteArray = bytes.ToArray();
         }
 
         public bool ReadBoolean()

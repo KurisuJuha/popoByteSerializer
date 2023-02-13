@@ -46,4 +46,16 @@ public class DefaultTest
         var readValue = reader.ReadShort();
         Assert.AreEqual(value, readValue);
     }
+
+    [Test]
+    public void UShortTest()
+    {
+        var value = (ushort)123;
+        DataWriter writer = new DataWriter();
+        writer.Puts(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadUShort();
+        Assert.AreEqual(value, readValue);
+    }
+
 }

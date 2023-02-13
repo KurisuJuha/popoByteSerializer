@@ -113,4 +113,15 @@ public class DefaultTest
         Assert.AreEqual(value, readValue);
     }
 
+    [Test]
+    public void FloatTest()
+    {
+        var value = 123.4f;
+        DataWriter writer = new DataWriter();
+        writer.Puts(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadFloat();
+        Assert.AreEqual(value, readValue);
+    }
+
 }

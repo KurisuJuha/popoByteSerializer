@@ -80,5 +80,13 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
             byteList.AddRange(BitConverter.GetBytes(value));
             return this;
         }
+
+        public DataWriter Append(byte[] bytes)
+        {
+            foreach (var b in bytes) Append(b);
+
+            return this;
+        }
+
     }
 }

@@ -10,5 +10,8 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
         public static Vector2Int ReadVector2Int(this DataReader self)
             => new Vector2Int(self.ReadInt(), self.ReadInt());
 
+        public static Vector3 ReadVector3(this DataReader self)
+            => new Vector3(self.ReadFloat(), self.ReadFloat(), self.ReadFloat());
+
     }
 }

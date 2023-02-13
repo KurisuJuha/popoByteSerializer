@@ -27,5 +27,8 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
         public Int16 ReadInt16()
             => BitConverter.ToInt16(ReadBytes(2), 0);
 
+        public UInt16 ReadUInt16()
+            => BitConverter.ToUInt16(ReadBytes(2), 0);
+
     }
 }

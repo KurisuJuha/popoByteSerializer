@@ -37,4 +37,15 @@ public class UnityExTest
         Assert.AreEqual(value, readValue);
     }
 
+    [Test]
+    public void Vector3IntTest()
+    {
+        var value = new Vector3Int(234, -3234, 3);
+        DataWriter writer = new DataWriter();
+        writer.Puts(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadVector3Int();
+        Assert.AreEqual(value, readValue);
+    }
+
 }

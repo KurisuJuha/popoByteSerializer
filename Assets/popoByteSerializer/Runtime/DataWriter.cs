@@ -63,7 +63,7 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
             return this;
         }
 
-        public DataWriter Puts(char value)
+        public DataWriter Puts(Char value)
         {
             byteList.AddRange(BitConverter.GetBytes(value));
             return this;

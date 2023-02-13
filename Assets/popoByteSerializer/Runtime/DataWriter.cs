@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Text;
 
 namespace JuhaKurisu.PopoTools.ByteSerializer
 {
@@ -95,5 +96,10 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
             return this;
         }
 
+        public DataWriter Append(string value)
+        {
+            AppendWithLength(Encoding.UTF8.GetBytes(value));
+            return this;
+        }
     }
 }

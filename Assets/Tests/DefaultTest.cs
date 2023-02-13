@@ -58,4 +58,15 @@ public class DefaultTest
         Assert.AreEqual(value, readValue);
     }
 
+    [Test]
+    public void IntTest()
+    {
+        var value = (int)-12;
+        DataWriter writer = new DataWriter();
+        writer.Puts(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadInt();
+        Assert.AreEqual(value, readValue);
+    }
+
 }

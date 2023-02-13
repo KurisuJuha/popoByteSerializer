@@ -124,4 +124,14 @@ public class DefaultTest
         Assert.AreEqual(value, readValue);
     }
 
+    [Test]
+    public void DoubleTest()
+    {
+        var value = -12423423442.4324d;
+        DataWriter writer = new DataWriter();
+        writer.Puts(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadDouble();
+        Assert.AreEqual(value, readValue);
+    }
 }

@@ -14,5 +14,9 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
         {
             byteArray = bytes;
         }
+
+        public bool ReadBoolean()
+            => BitConverter.ToBoolean(new byte[] { ReadByte() }, 0);
+
     }
 }

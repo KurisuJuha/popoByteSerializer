@@ -88,5 +88,12 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
             return this;
         }
 
+        public DataWriter AppendWithLength(byte[] bytes)
+        {
+            Append(bytes.Length);
+            Append(bytes);
+            return this;
+        }
+
     }
 }

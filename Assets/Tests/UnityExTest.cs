@@ -85,4 +85,15 @@ public class UnityExTest
         var readValue = reader.ReadColor();
         Assert.AreEqual(value, readValue);
     }
+
+    [Test]
+    public void QuaternionTest()
+    {
+        var value = new Quaternion(0.4f, -243.4f, 13212, 343);
+        DataWriter writer = new DataWriter();
+        writer.Puts(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadQuaternion();
+        Assert.AreEqual(value, readValue);
+    }
 }

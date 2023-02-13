@@ -15,4 +15,15 @@ public class UnityExTest
         Assert.AreEqual(value, readValue);
     }
 
+    [Test]
+    public void Vector2IntTest()
+    {
+        var value = new Vector2Int(2, -3234);
+        DataWriter writer = new DataWriter();
+        writer.Puts(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadVector2Int();
+        Assert.AreEqual(value, readValue);
+    }
+
 }

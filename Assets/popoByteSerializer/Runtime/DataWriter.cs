@@ -68,5 +68,12 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
             byteList.AddRange(BitConverter.GetBytes(value));
             return this;
         }
+
+        public DataWriter Puts(Single value)
+        {
+            byteList.AddRange(BitConverter.GetBytes(value));
+            return this;
+        }
+
     }
 }

@@ -24,5 +24,8 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
 
         public static Color ReadColor(this DataReader self)
             => new Color(self.ReadFloat(), self.ReadFloat(), self.ReadFloat(), self.ReadFloat());
+
+        public static Quaternion ReadQuaternion(this DataReader self)
+            => new Quaternion(self.ReadFloat(), self.ReadFloat(), self.ReadFloat(), self.ReadFloat());
     }
 }

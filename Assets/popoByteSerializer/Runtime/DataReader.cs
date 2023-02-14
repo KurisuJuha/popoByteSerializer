@@ -70,5 +70,7 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
         public DataWriter ReadDataWriter()
             => new DataWriter(ReadBytes());
 
+        public DataReader ReadDataReader()
+            => new DataReader(ReadBytes());
     }
 }

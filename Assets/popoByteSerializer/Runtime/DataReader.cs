@@ -66,5 +66,9 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
 
         public string ReadString()
             => Encoding.UTF8.GetString(ReadBytes());
+
+        public DataWriter ReadDataWriter()
+            => new DataWriter(ReadBytes());
+
     }
 }

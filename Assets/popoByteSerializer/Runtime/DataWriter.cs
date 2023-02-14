@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Linq;
 
 namespace JuhaKurisu.PopoTools.ByteSerializer
 {
@@ -9,6 +10,11 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
     {
         public ReadOnlyCollection<byte> bytes => byteList.AsReadOnly();
         private List<byte> byteList = new List<byte>();
+
+        public DataWriter(byte[] bytes)
+        {
+            byteList.AddRange(bytes);
+        }
 
         public DataWriter Append(Boolean value)
         {

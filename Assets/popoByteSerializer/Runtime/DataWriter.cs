@@ -11,6 +11,8 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
         public ReadOnlyCollection<byte> bytes => byteList.AsReadOnly();
         private List<byte> byteList = new List<byte>();
 
+        public DataWriter() { }
+
         public DataWriter(byte[] bytes)
         {
             byteList.AddRange(bytes);

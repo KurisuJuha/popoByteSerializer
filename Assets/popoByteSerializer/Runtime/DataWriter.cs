@@ -107,5 +107,12 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
             AppendWithLength(Encoding.UTF8.GetBytes(value));
             return this;
         }
+
+        public DataWriter Append(DataWriter writer)
+        {
+            AppendWithLength(writer.bytes.ToArray());
+            return this;
+        }
+
     }
 }

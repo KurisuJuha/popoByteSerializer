@@ -121,5 +121,11 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
             AppendWithLength(reader.bytes.ToArray());
             return this;
         }
+
+        public DataWriter Append(IpopoSerialize value)
+        {
+            value.Serialize(this);
+            return this;
+        }
     }
 }

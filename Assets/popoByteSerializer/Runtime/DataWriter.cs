@@ -127,5 +127,11 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
             value.Serialize(this);
             return this;
         }
+
+        public DataWriter Append(Guid value)
+        {
+            Append(value.ToByteArray());
+            return this;
+        }
     }
 }

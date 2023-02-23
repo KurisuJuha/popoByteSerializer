@@ -78,5 +78,8 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
             value.Deserialize(this);
             return value;
         }
+
+        public Guid ReadGuid()
+            => new Guid(ReadBytes(16));
     }
 }

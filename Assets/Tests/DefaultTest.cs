@@ -168,4 +168,16 @@ public class DefaultTest
         var readValue = reader.ReadString();
         Assert.AreEqual(value, readValue);
     }
+
+    [Test]
+
+    public void GuidTest()
+    {
+        var value = System.Guid.NewGuid();
+        DataWriter writer = new DataWriter();
+        writer.Append(value);
+        DataReader reader = new DataReader(writer.bytes);
+        var readValue = reader.ReadGuid();
+        Assert.AreEqual(value, readValue);
+    }
 }

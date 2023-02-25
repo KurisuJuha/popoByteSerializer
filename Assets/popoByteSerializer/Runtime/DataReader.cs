@@ -73,12 +73,6 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
         public DataReader ReadDataReader()
             => new DataReader(ReadBytes());
 
-        public T ReadIpopoSerialize<T>(T value) where T : IpopoSerialize
-        {
-            value.Deserialize(this);
-            return value;
-        }
-
         public Guid ReadGuid()
             => new Guid(ReadBytes(16));
     }

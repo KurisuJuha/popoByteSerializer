@@ -122,12 +122,6 @@ namespace JuhaKurisu.PopoTools.ByteSerializer
             return this;
         }
 
-        public DataWriter Append(IpopoSerialize value)
-        {
-            value.Serialize(this);
-            return this;
-        }
-
         public DataWriter Append(Guid value)
         {
             Append(value.ToByteArray());
